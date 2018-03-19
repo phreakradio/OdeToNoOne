@@ -1,0 +1,345 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Ode to No One TEST</title>
+
+<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" >
+<style type="text/css">
+body {
+    background-color: #000;
+	font-family: sans-serif;
+	font-size: 14px;
+	color:#000;
+	margin:0;
+	padding:0;
+}
+#footerLINK{ 
+	position:fixed;
+	width:120px; 
+	left:50%; 
+    bottom:5%; 
+    margin-left:-60px; 
+    color:#999999; 
+    font-size:9px; 
+    font-stretch:extra-expanded;
+    z-index:-10;
+}
+a:link {
+	text-decoration:none;
+	color:#999999;
+}
+a:visited {
+	text-decoration:none;
+	color:#999999;
+}
+a:hover {
+	text-decoration:none;
+	color:#999999;
+}
+a:active {
+	text-decoration:none;
+	color:#999999;
+}
+#links, #linksM, #linksP, #linksV, #linksG, #linksC {
+	width:71px;
+	height:420px;
+	left:50%;
+	top:50%;
+	margin-left:-31px;
+	/*background-image:url(images/about.png);*/
+	/*background-color:#F30;*/
+	position:fixed;
+	z-index:-1;
+	transform: rotate(45deg);
+	transform-origin:50% 0%;
+	-ms-transform: rotate(45deg); /* IE 9 */
+	-ms-transform-origin:50% 0%; /* IE 9 */
+	-webkit-transform: rotate(45deg); /* Safari and Chrome */
+	-webkit-transform-origin:50% 0%; /* Safari and Chrome */	
+}
+
+#content {
+	position:fixed;
+    width:249px;
+	height:245px;
+	margin-left:-125px;
+	left:50%;
+	margin-top:-123px;
+	top:50%;
+    background-color:#000;
+	/*background-image:url(images/logo-small.png);	*/
+	z-index:-3;	
+}
+#media
+{
+	position:fixed;
+	width:100%;
+	height:100%;
+	background-color:#FFFFFF;
+	display:none	
+}
+#galleria{ 
+	margin-left:-460px;
+	margin-top:-250px;
+	width: 920px; 
+	height: 500px;
+	left:50%;
+	top:50%;
+	position:fixed;
+	background:#FFF; 
+}
+body .galleria-container{ 
+	background:#fff; color:#000; 
+}
+</style>
+
+<!--OFFLINE USE-->
+<script src="js/jquery-1.8.3.min.js" type="text/javascript"></script>
+
+<!--DIV scroller-->
+<script src="jquery.scrollTo-master/jquery.scrollTo.js" type="text/javascript"></script>
+<!--DIV scroller-->
+
+<!-- LOADER ->
+<script src="QueryLoader2-master/demo/js/lib/jquery.min.js" type="text/javascript"></script>
+<script src="QueryLoader2-master/jquery.queryloader2.js" type="text/javascript"></script>
+<script src="QueryLoader2-master/demo/js/script.js" type="text/javascript"></script>
+<!--LOADER-->
+
+<!--PHOTO SLIDESHOW-->
+<script src="galleria/galleria-1.2.9.min.js"></script>
+<!--PHOTO SLIDESHOW-->
+
+<script> //ROTARY SCRIPT FOR MAIN PAGE
+$(function() {
+	/* STARTING DEGREES
+	//ABOUT = 60; 
+	//MUSIC = 120
+	//PHOTOTS=180
+	//VIDEOS =240
+	//GIGS = 300 REMOVED
+	//CONTACT = 360
+	*/
+    var $rota = $('#links'),
+        degree = 72,
+        timer;
+    var $rotaM = $('#linksM'),
+        degreeM = 144,
+        timer;
+    var $rotaP = $('#linksP'),
+        degreeP = 216,
+        timer;
+    var $rotaV = $('#linksV'),
+        degreeV = 288,
+        timer;
+    /*var $rotaG = $('#linksG'),
+        degreeG = 300,
+        timer;*/
+    var $rotaC = $('#linksC'),
+        degreeC = 360,
+        timer;
+		
+
+    function rotate() {    
+        $rota.css({ transform: 'rotate(' + degree + 'deg)'});
+        $rotaM.css({ transform: 'rotate(' + degreeM + 'deg)'});
+        $rotaP.css({ transform: 'rotate(' + degreeP + 'deg)'});
+        $rotaV.css({ transform: 'rotate(' + degreeV + 'deg)'});
+        //$rotaG.css({ transform: 'rotate(' + degreeG + 'deg)'});
+        $rotaC.css({ transform: 'rotate(' + degreeC + 'deg)'});								
+        // timeout increase degrees:
+        timer = setTimeout(function() {
+            ++degree;
+            ++degreeM;
+            ++degreeP;
+            ++degreeV;
+            //++degreeG;
+            ++degreeC;
+						
+            rotate(); // loop it
+        },50);
+    }
+	rotate();
+});
+</script>
+
+<script> //MEDIA ELEMENT LINKS
+function aboutSWITCH(){
+	$('#linkPhoto').aboutLoad();
+	};
+function musicSWITCH(){
+	$('#linkPhotoM').musicLoad();
+	};
+function photoSWITCH(){
+	$('#linkPhotoP').imageLoad();
+	};
+function videoSWITCH(){
+	$('#linkPhotoV').videoLoad();
+	};
+/*function gigSWITCH(){
+	$('#linkPhotoG').gigLoad();
+	};*/
+function contactSWITCH(){
+	$('#linkPhotoC').contactLoad();
+	};
+function facebookDis(){
+	window.location.assign("https://www.facebook.com/odetonoone");
+}
+function twitterDis(){
+	window.location.assign("");
+}
+function youtubeDis(){
+	window.location.assign("http://www.youtube.com/user/fireball1193");
+}
+function messageDis(){
+	window.location.assign("mailto:dm282@njit.edu?Subject=I%20saw%20your%20website");
+}	
+function videoDown(){
+	$('#test').Down();
+}	
+function videoUp(){
+	$('#test').Up();
+}	
+
+</script>
+
+<script>
+//3840
+//240
+(function( $ ){
+	$.fn.aboutLoad = function() {
+		$("#media").fadeOut(500);
+		//$("#media").animate({top:'-7000px'},800);		
+		//<br /><center><img src="images/header.jpg" width="650" height="61" /></center><br /><br />
+		setTimeout(function(){		document.getElementById("media").innerHTML='<div style="width:960px;position:relative; margin-top:-163px; margin-left:-480px; top:50%; left:50%;"><table>  	<tr>      	<td>      	    <img src="images/1368909_10201074449041492_1663849955_n.jpg"width="480" height="320" style="padding:10px"/>		</td>		<td width="480">        	<p style="padding:20px">Ode To No One is a rock band out of New York City drawing inspiration from both a variety of great musicians before them and personal experiences between two song writers, Luis Feliciano and Li Sabas. This leads to a wide spectrum of genres and sounds that the band has to offer. Formed in November of 2008, Ode To No One has gone through a number of member changes, but the sound and message have remained consistent and genuine. <br /><br />The directive: cohesive composition and substantial lyrics all to share a personal and relatable experience with the listeners through heartfelt music for people of all ages and backgrounds.</p>    	</td>	</tr></table></div><div id="footer" style="width:560px; height:16px; margin-left:-280px; left:50%; position:relative; top:65%; background-color:#000"><div style="	background-color:#FFF;    color:#000000;width:90px;text-align: center;float:left;padding-right: 25px;padding-left: 25px;"><a id="music" onclick="musicSWITCH()" href="#">Music</a></div>    <div style="background-color:#FFF;color:#000000;width:90px;text-align: center;float:left;padding-right: 25px;padding-left: 25px;"><a id="video" onclick="videoSWITCH()" href="#">Videos</a></div><div style="background-color:#FFF;color:#000000;width:90px;text-align: center;float:left;padding-right: 25px;padding-left: 25px;"><a id="photo" onclick="photoSWITCH()" href="#">Photos</a></div><div style="background-color:#FFF;color:#000000;width:90px;text-align: center;float:left;padding-right: 25px;padding-left: 25px;"><a id="contact" onclick="contactSWITCH()" href="#">Contact</a></div></div>';		
+}, 1000);
+		$("#media").delay(1300).fadeIn('slow');
+		//$("#media").animate({top:'0px'},800);
+	};
+})( jQuery );
+
+(function( $ ){
+	$.fn.musicLoad = function() {
+		$("#media").fadeOut(500);		
+		//<br /><center><img src="images/header.jpg" width="650" height="61" /></center><br /><br />
+		setTimeout(function(){		document.getElementById("media").innerHTML='<iframe width="600" style="position:fixed; top:10%; margin-left:-300px; left:50%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/34209611"></iframe><div id="footer" style="width:560px; height:16px; margin-left:-280px;left:50%; position:relative; top:88%"><div style="	background-color:#FFF;    color:#000000;width:90px;text-align: center;float:left;padding-right: 25px;padding-left: 25px;"><a id="about" onclick="aboutSWITCH()" href="#">About</a></div>    <div style="background-color:#FFF;color:#000000;width:90px;text-align: center;float:left;padding-right: 25px;padding-left: 25px;"><a id="video" onclick="videoSWITCH()" href="#">Videos</a></div><div style="background-color:#FFF;color:#000000;width:90px;text-align: center;float:left;padding-right: 25px;padding-left: 25px;"><a id="photo" onclick="photoSWITCH()" href="#">Photos</a></div><div style="background-color:#FFF;color:#000000;width:90px;text-align: center;float:left;padding-right: 25px;padding-left: 25px;"><a id="contact" onclick="contactSWITCH()" href="#">Contact</a></div>';		
+}, 1000);
+		$("#media").delay(1300).fadeIn('slow');
+	};
+})( jQuery );
+
+(function( $ ){
+	$.fn.imageLoad = function(){
+		$("#media").fadeOut(500);
+		setTimeout(function(){		document.getElementById("media").innerHTML='<div id="galleria"><img src="images/temp/0.jpg" /><img src="images/temp/1.jpg" /><img src="images/temp/2.jpg" /><img src="images/temp/3.jpg" /><img src="images/temp/4.jpg" /><img src="images/temp/5.jpg" /><img src="images/temp/6.jpg" /><img src="images/temp/7.jpg" /><img src="images/temp/8.jpg" /><img src="images/temp/9.jpg" /></div><div id="footer" style="width:560px; height:16px; margin-left:-280px;left:50%; position:relative; top:88%"><div id="about" style="	background-color:#FFF;    color:#000000;width:90px;text-align: center;float:left;padding-right: 25px;padding-left: 25px;" ><a onclick="aboutSWITCH()" href="#">About</a></div><div style="	background-color:#FFF;    color:#000000;width:90px;text-align: center;float:left;padding-right: 25px;padding-left: 25px;"><a id="music" onclick="musicSWITCH()" href="#">Music</a></div>    <div style="background-color:#FFF;color:#000000;width:90px;text-align: center;float:left;padding-right: 25px;padding-left: 25px;"><a id="video" onclick="videoSWITCH()" href="#">Videos</a></div><div style="background-color:#FFF;color:#000000;width:90px;text-align: center;float:left;padding-right: 25px;padding-left: 25px;"><a id="contact" onclick="contactSWITCH()" href="#">Contact</a></div></div>';		
+}, 1000);
+		$("#media").delay(1300).fadeIn('slow');
+	  	Galleria.loadTheme('galleria/themes/classic/galleria.classic.min.js');          
+	  	Galleria.run('#galleria');
+	};	
+})( jQuery );
+
+(function( $ ){
+	$.fn.videoLoad = function() {
+		$("#media").fadeOut(500);		
+		//<br /><center><img src="images/header.jpg" width="650" height="61" /></center><br /><br />
+		setTimeout(function(){		document.getElementById("media").innerHTML='<div style="position:relative; top:10%"><div id="test" style="position:relative; border:thin; margin-left:-437px; left:50%; width:875px; height:480px; overflow-y:hidden">        <iframe width="853" height="480" src="https://www.youtube.com/embed/A3UBhYNm1Tg?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>        <iframe width="853" height="480" src="https://www.youtube.com/embed/M_oRaxP-QRo?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>            <iframe width="853" height="480" src="https://www.youtube.com/embed/0l1Q-S4xc_o?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>            <iframe width="853" height="480" src="https://www.youtube.com/embed/NKtKWQwlUds?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>            <iframe width="853" height="480" src="https://www.youtube.com/embed/wZyaTcmGShc?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>            <iframe width="853" height="480" src="https://www.youtube.com/embed/0XQwOveIEd4?feature=player_detailpage" frameborder="0" allowfullscreen></iframe>                  </div>        <div style="position:relative; left:50%; margin-left:-27px">    <br />       <div class="icon-chevron-up icon-3x" onclick="videoUp()"></div><div class="icon-chevron-down icon-3x" onclick="videoDown()"></div>	</div></div><div id="footer" style="width:560px; height:16px; margin-left:-280px;left:50%; position:relative; top:20%"><div id="about" style="	background-color:#FFF;    color:#000000;width:90px;text-align: center;float:left;padding-right: 25px;padding-left: 25px;" ><a onclick="aboutSWITCH()" href="#">About</a></div><div style="	background-color:#FFF;    color:#000000;width:90px;text-align: center;float:left;padding-right: 25px;padding-left: 25px;"><a id="music" onclick="musicSWITCH()" href="#">Music</a></div>    <div style="background-color:#FFF;color:#000000;width:90px;text-align: center;float:left;padding-right: 25px;padding-left: 25px;"><a id="photo" onclick="photoSWITCH()" href="#">Photos</a></div><div style="background-color:#FFF;color:#000000;width:90px;text-align: center;float:left;padding-right: 25px;padding-left: 25px;"><a id="contact" onclick="contactSWITCH()" href="#">Contact</a></div>';		
+}, 1000);		
+		$("#media").delay(1300).fadeIn('slow');
+	};
+})( jQuery );
+
+/*(function( $ ){
+	$.fn.gigLoad = function() {
+		$("#media").fadeOut(500);		
+		//<br /><center><img src="images/header.jpg" width="650" height="61" /></center><br /><br />
+		setTimeout(function(){		document.getElementById("media").innerHTML='<div id="footer" style="left:50%; margin-left:-350px; position:relative; top:90%"><div id="about" style="	background-color:#FFF;    color:#000000;width:90px;text-align: center;float:left;padding-right: 25px;padding-left: 25px;" ><a onclick="aboutSWITCH()" href="#">About</a></div><div style="	background-color:#FFF;    color:#000000;width:90px;text-align: center;float:left;padding-right: 25px;padding-left: 25px;"><a id="music" onclick="musicSWITCH()" href="#">Music</a></div>    <div style="background-color:#FFF;color:#000000;width:90px;text-align: center;float:left;padding-right: 25px;padding-left: 25px;"><a id="photo" onclick="photoSWITCH()" href="#">Photos</a></div><div style="background-color:#FFF;color:#000000;width:90px;text-align: center;float:left;padding-right: 25px;padding-left: 25px;"><a id="video" onclick="videoSWITCH()" href="#">Video</a></div><div style="background-color:#FFF;color:#000000;width:90px;text-align: center;float:left;padding-right: 25px;padding-left: 25px;"><a id="contact" onclick="contactSWITCH()" href="#">Contact</a></div>';		
+}, 1000);		
+		$("#media").delay(1300).fadeIn('slow');
+	};
+})( jQuery ); */
+
+(function( $ ){
+	$.fn.contactLoad = function() {
+		$("#media").fadeOut(500);		
+		//<br /><center><img src="images/header.jpg" width="650" height="61" /></center><br /><br />
+		setTimeout(function(){		document.getElementById("media").innerHTML='<div style="width:512px; position:relative; margin-left:-224px; left:50%; top:40%"><div class="icon-stack icon-4x" onclick="facebookDis()">	<i class="icon-check-empty icon-stack-base"></i>    <i class="icon-facebook"></i></div><div class="icon-stack icon-4x" onclick="twitterDis()">	<i class="icon-check-empty icon-stack-base"></i>    <i class="icon-twitter"></i></div><div class="icon-stack icon-4x" onclick="youtubeDis()">	<i class="icon-check-empty icon-stack-base"></i>    <i class="icon-youtube"></i></div><div class="icon-stack icon-4x" onclick="messageDis()">	<i class="icon-check-empty icon-stack-base"></i>    <i class="icon-envelope-alt"></i></div></div><div id="footer" style="width:560px; height:16px; margin-left:-280px; left:50%; position:relative; top:74%"><div id="about" style="	background-color:#FFF;    color:#000000;width:90px;text-align: center;float:left;padding-right: 25px;padding-left: 25px;" ><a onclick="aboutSWITCH()" href="#">About</a></div><div style="	background-color:#FFF;    color:#000000;width:90px;text-align: center;float:left;padding-right: 25px;padding-left: 25px;"><a id="music" onclick="musicSWITCH()" href="#">Music</a></div>    <div style="background-color:#FFF;color:#000000;width:90px;text-align: center;float:left;padding-right: 25px;padding-left: 25px;"><a id="photo" onclick="photoSWITCH()" href="#">Photos</a></div><div style="background-color:#FFF;color:#000000;width:90px;text-align: center;float:left;padding-right: 25px;padding-left: 25px;"><a id="video" onclick="videoSWITCH()" href="#">Video</a></div>';		
+}, 1000);		
+		$("#media").delay(1300).fadeIn('slow');
+	};
+})( jQuery );
+//LOADING MEDIA ELEMENTS
+
+(function( $ ) //VIDEO SHIFTER
+	{	
+		var diff = 0;
+		{
+			$.fn.Down = function() 
+			{
+				if(diff<2880)
+				{				
+					diff+=480;
+					$('#test').scrollTo( diff, 100);
+				}
+				else
+				{diff=2400;}
+			};
+			$.fn.Up = function() 
+			{
+				if(diff > 0)
+				{				
+					diff-=480;
+					$('#test').scrollTo( diff, 100);
+				}
+				else
+				{}
+			};
+		}
+	}
+)( jQuery );
+
+</script>
+</head>
+
+<body>
+<div id="media">
+</div>
+<div id="content">
+<img src="images/logo-small.png" style="left:inherit; top:inherit"  />
+    	<div id="links"> <!-- ABOUT -->
+        	<a href="#">        
+			<img id="linkPhoto" onclick="$('#linkPhoto').aboutLoad();$('#content').hide(100); " src="images/2about.png" alt="AboutLink">
+            </a>
+        </div>
+    	<div id="linksM"> <!-- MUSIC -->
+        	<a href="#">
+			<img id="linkPhotoM" onclick="$('#linkPhotoM').musicLoad();$('#content').hide(100); " src="images/2music.png" alt="MusicLink">
+            </a>
+        </div>
+    	<div id="linksV"> <!-- VIDEOS -->
+        	<a href="#">
+			<img id="linkPhotoV" onclick="$('#linkPhotoV').videoLoad();$('#content').hide(100); " src="images/2videos.png" alt="VideoLink">
+            </a>
+        </div>
+    	<div id="linksP"> <!-- PHOTOS -->
+        	<a href="#">
+			<img id="linkPhotoP" onclick="$('#linkPhotoP').imageLoad();$('#content').hide(100); " src="images/2photos.png" alt="PhotoLink">
+            </a>
+        </div>
+    	<!--div id="linksG"> <!-- GIGS ->
+        	<a href="#">
+			<img id="linkPhotoG" onclick="$('#linkPhotoG').gigLoad();$('#content').hide(100); " src="images/2gigs.png" alt="GigLink">
+            </a>
+        </div-->
+    	<div id="linksC"> <!-- CONTACT -->
+        	<a href="#">
+			<img id="linkPhotoC" onclick="$('#linkPhotoC').contactLoad();$('#content').hide(100); " src="images/2contact.png" alt="ContactLink">
+            </a>
+        </div>                                        
+</div>
+
+
+<div id="footerLINK">Design by <a href="http://web.njit.edu/~dm282">Dmitri Malaniouk</a></div>
+</body>
+</html>
